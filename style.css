@@ -1,0 +1,371 @@
+:root {
+  --black: #1b1b22;
+  --brown: #282726;
+  --gray: #54504c;
+  --lgray: #86817c;
+  --beige: #d6cab0;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: 'Noto Sans', sans-serif;
+  min-height: 4000px;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/hero.png);
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale();
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero h1,
+.hero h4,
+.hero h2,
+.hero p {
+  text-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;
+}
+
+.hero h2,
+.home h2,
+.gallery h2,
+.now h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+}
+
+.hero h4 {
+  font-size: 1.6rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+.hero a {
+  color: white;
+  background-color: var(--gray);
+}
+
+.hero a:hover {
+  background-color: var(--brown);
+  color: var(--lgray);
+}
+
+/* Navbar */
+.mynavbar {
+  background-color: rgba(225, 255, 255, 0.8) !important;
+  backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+.mynavbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%2386817c' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .nav-link {
+  color: var(--lgray);
+}
+
+.home {
+  min-height: 100vh;
+  margin-top: -6rem;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+  background-color: var(--black);
+  color: #999;
+}
+
+.home h3 {
+  font-size: 1.5rem;
+  margin: 5rem 0;
+}
+
+.home p {
+  font-size: 1.1rem;
+}
+
+.gallery {
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  background-color: var(--gray);
+  min-height: 100vh;
+  color: #999;
+}
+
+.gallery p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.gallery h4,
+.sidang h4,
+.wisuda h4 {
+  font-size: 1.5rem;
+  margin: 5rem 0;
+  font-family: 'Cormorant Garamond';
+}
+
+.gallery .foto {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.gallery .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidang {
+  background-color: var(--black);
+  color: #999;
+  min-height: 100vh;
+}
+
+.sidang h2,
+.wisuda h2 {
+  font-family: 'Cormorant Garamond';
+  font-size: 4rem;
+  color: #999;
+  margin: 6rem 0 2rem;
+}
+
+.sidang p,
+.wisuda p {
+  font-size: 1.1rem;
+}
+
+.wisuda {
+  background-color: var(--gray);
+  min-height: 100vh;
+  color: #999;
+  font-weight: bold;
+}
+
+.now {
+  min-height: 100vh;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+  background-color: var(--black);
+  color: #999;
+}
+
+.now h3 {
+  font-size: 1.5rem;
+  margin: 5rem 0;
+}
+
+.now p {
+  font-size: 1.1rem;
+}
+
+.doa {
+  background-color: var(--black);
+  color: #999;
+  min-height: 100vh;
+}
+
+.doa h4 {
+  margin: 8rem 0 5rem 0;
+}
+
+.doa h3 {
+  font-size: 1.5rem;
+  margin: 5rem 0;
+}
+
+.doa h5 {
+  font-size: 1.1rem;
+  margin: 5rem 0;
+}
+
+footer {
+  padding: 3rem;
+  background-color: var(--lgray);
+  color: white;
+  font-size: 1.1rem;
+}
+
+footer a {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  color: #999;
+}
+
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Media Query */
+/* laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .sticky-top {
+    overflow: hidden;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .sidang p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0 0 0;
+  }
+
+  .sidang img {
+    width: 80%;
+  }
+
+  .wisuda .foto_wisuda {
+    max-width: 50%;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .sidang .foto_sidang {
+    max-width: 80%;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .gallery .foto {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .gallery .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wisuda .foto_foto {
+    margin: auto;
+  }
+
+  .doa h4 {
+    margin: 8rem 5rem 5rem 5rem;
+    font-size: 1.5rem;
+  }
+
+  .doa h3 {
+    font-size: 1.5rem;
+    margin: 5rem 5rem;
+  }
+
+  .doa h5 {
+    font-size: 1.1rem;
+    margin: 5rem 0;
+  }
+
+  .doa p {
+    font-size: 1.1rem;
+    margin: auto 5rem;
+  }
+}
+
+/* Dekstop Version */
+@media (min-width: 992px) {
+  .nav-link {
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+
+  .nav-link:hover::after {
+    content: '';
+    display: block;
+    border-radius: 3px solid #2e2d2c;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+}
